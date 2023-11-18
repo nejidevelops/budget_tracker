@@ -10,7 +10,7 @@ export default function NavBar() {
 
     return (
         <nav className="w-full shadow">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <div className="justify-between px-4 lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <NavLink to="/" className="flex items-center justify-center" onClick={() => setActiveLink("Home")}>
@@ -70,11 +70,6 @@ export default function NavBar() {
                             <li>
                                 <NavLink to="/add-transaction" onClick={() => setActiveLink("Add Transaction")} activeClassName="active-link">
                                     Add Transaction
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/settings" onClick={() => setActiveLink("Settings")} activeClassName="active-link">
-                                    Settings
                                 </NavLink>
                             </li>
                         </ul>

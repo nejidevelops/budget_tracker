@@ -31,14 +31,14 @@ const TipsComponent = () => {
   return (
     <div>
       <div className='tips'>
-        <h2>Tips</h2>
+        <h2 className="text-2xl font-bold mb-4">Tips</h2>
         <div className="container-fluid grid gap-10 px-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {tips.map((tip) => (
-            <article className='max-w-sm rounded overflow-hidden flex flex-col items-center' key={tip.id}>
-              <img src={tip.image} alt={tip.title} className='mb-4' />
-              <h3 className='font-bold text-xl mb-2 text-center'>{tip.title}</h3>
-              <p className="text-gray-700 text-base text-center">{tip.content}</p>
-            </article>
+            <article key={tip.id} className="bg-gray-200 p-4 rounded shadow flex flex-col items-center">
+            <img src={tip.image} alt={tip.title} className="mb-4" />
+            <h3 className="text-xl font-bold mb-2">{tip.title}</h3>
+            <p className="text-gray-700 text-base text-center">{tip.content}</p>
+          </article>
           ))}
         </div>
       </div>

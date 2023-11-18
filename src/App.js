@@ -5,14 +5,12 @@ import Header from './components/Header';
 import TransactionForm from './components/TransactionForm';
 import TransactionList from './components/TransactionList';
 import Footer from './components/Footer';
-import TipsComponent from './components/Tips';
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(0);
 
   useEffect(() => {
-    // Calculate balance whenever transactions change
     const newBalance = transactions.reduce(
       (acc, transaction) => (transaction.type === 'income' ? acc + transaction.amount : acc - transaction.amount),
       0
