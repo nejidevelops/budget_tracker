@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom"; // If using React Router
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
 
-    // Add state to track the active link
     const [activeLink, setActiveLink] = useState("Home");
 
     return (
